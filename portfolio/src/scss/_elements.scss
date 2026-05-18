@@ -1,0 +1,22 @@
+@use 'core' as *;
+@use 'settings' as *;
+@use 'elements-intro' as *;
+
+* {
+  font-family: 'poppins', sans-serif;
+}
+
+h2 {
+  color: $color-purple;
+  font-weight: 700;
+}
+
+.section-top {
+  margin-top:15rem ;
+}
+
+.green{
+
+  color: $color-blue-green;
+}
+

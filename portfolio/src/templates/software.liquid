@@ -1,0 +1,11 @@
+{% for entry in software %}
+  <div class="col-md-4 mb-4">
+    <div class="card text-center h-100 card-hover">
+      <img class="c-liquid-img" src="{{ entry[1].image }}" class="card-img-top" alt="{{ entry[1].name }}">
+      <div class="card-body">
+        <h3 class="card-title">{{ entry[1].name }}</h3>
+        <p class="card-text">{{ entry[1].description }}</p>
+      </div>
+    </div>
+  </div>
+{% endfor %}

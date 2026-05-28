@@ -1,53 +1,8 @@
-
-:root {
-  --color-dark: #010514;
-  --color-light: #ffffff;
-  --color-base--light: #e6e6e6;
-  --color-base--xlight: #f5f6f6;
-  --color-accent: #69c6ba;
-  --color-highlight: #c66995;
-  --color-warning: #f44336;
-  --color-white: #ffffff;
-
-
-  --color-dark-rgb: 1, 5, 20;        /* #010514 */
-  --color-accent-rgb: 105, 198, 186; /* #69c6ba */
-  --color-highlight-rgb: 198, 105, 149; /* #c66995 */
-}
-
-
-.o-darkmode {
-  --color-dark: #ffffff;
-  --color-light: #2f327d;
-  --color-base--light: #363636;
-  --color-base--xlight: #2f327d;
-}
-
-
-$color-dark: var(--color-dark);
-$color-light: var(--color-light);
-$color-base--light: var(--color-base--light);
-$color-base--xlight: var(--color-base--xlight);
-$color-accent: var(--color-accent);
-$color-highlight: var(--color-highlight);
-$color-warning: var(--color-warning);
-$color-white: var(--color-white);
-
-$color-dark-rgb: var(--color-dark-rgb);
-$color-accent-rgb: var(--color-accent-rgb);
-$color-highlight-rgb: var(--color-highlight-rgb);
-
-$color-grey: #5b5b5b;
-$color-turquoise: #00cbb8;
-$color-turquoise-light: #00fff0;
-$color-blue-green: #49bbbd;
-$color-purple: #2f327d;
-$color-blue: #23bdee;
-$color-green: #00CBB8;
-
-$color-icon--red: #d8587e;
-$color-icon--yellow: #f88c3d;
-
+$color-red: #580702;
+$color-pink: #ffa9ab;
+$color-orange: #ff6e29;
+$color-grey: #9d7f7d;
+$color-light: #ffffff;
 
 $fw-light: 300;
 $fw-regular: 400;
@@ -55,7 +10,7 @@ $fw-medium: 600;
 $fw-bold: 700;
 
 
+
 body {
-  background-color: $color-light; 
-  color: $color-dark;             
+  background-color: $color-light;
 }

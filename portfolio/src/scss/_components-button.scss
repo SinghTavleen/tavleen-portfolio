@@ -1,0 +1,40 @@
+@use 'core' as *;
+@use 'bs-core' as *;
+
+@use 'core' as *;
+@use 'bs-core' as *;
+
+.c-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  font-size: 1rem;
+  text-decoration: none;
+
+  color: $color-red;
+  padding: 0.5rem 1rem;
+
+  border: 1px dashed transparent;
+  border-radius: 3rem;
+
+  background: transparent;
+  cursor: pointer;
+
+  transition:
+    border-color 0.3s ease,
+    background-color 0.3s ease,
+    transform 0.25s ease;
+
+  &:hover {
+    border-color: $color-red;
+    background-color: rgba($color-red, 0.08);
+    // transform: translateY(-2px);
+  }
+
+  &:focus-visible {
+    outline: 2px solid $color-red;
+    outline-offset: 4px;
+  }
+}

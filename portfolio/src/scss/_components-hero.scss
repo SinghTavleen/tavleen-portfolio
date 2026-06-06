@@ -1,0 +1,210 @@
+@use 'core' as *;
+@use 'settings' as *;
+
+.c-nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.c-intro {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+
+  &__container {
+    position: relative;
+    min-height: 100vh;
+    padding: 2rem 1.875rem 4rem;
+  }
+
+  &__resume {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.875rem;
+
+    color: $color-orange;
+    border-color: $color-orange;
+  }
+
+  &__header {
+    padding-top: 2rem;
+  }
+
+  &__title {
+    margin: 0;
+
+    color: $color-red;
+
+    font-weight: $fw-bold;
+    line-height: 0.8;
+  }
+
+  &__body {
+    margin-top: 2.75rem;
+  }
+
+  &__image-col {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__image {
+    width: min(31.25rem, 82vw);
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+    object-position: top top;
+
+    border-radius: 50%;
+    filter: grayscale(1);
+  }
+
+  &__text-col {
+    padding-top: 0.15rem;
+  }
+
+  &__surname {
+    margin: 0 0 3rem;
+
+    color: $color-pink;
+
+    font-weight: $fw-bold;
+    line-height: 0.82;
+  }
+
+  &__text {
+    max-width: 30.5rem;
+    margin: 0;
+
+    color: $color-red;
+
+    font-size: 1.5rem;
+    font-weight: $fw-regular;
+    line-height: 1.15;
+  }
+
+  &__button {
+    margin-top: 2.125rem;
+    border-color: $color-red;
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .c-intro {
+    &__header {
+      padding-top: 6rem;
+    }
+
+    &__surname {
+      font-size: clamp(5rem, 9vw, 8rem);
+    }
+
+    &__text {
+      max-width: 28rem;
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .c-intro {
+    &__container {
+      padding: 1.5rem 1.5rem 3rem;
+    }
+
+    &__resume {
+      top: 1.5rem;
+      right: 1.5rem;
+    }
+
+    &__header {
+      padding-top: 5.5rem;
+    }
+
+    &__title {
+      font-size: clamp(4.5rem, 16vw, 8rem);
+    }
+
+    &__body {
+      margin-top: 3rem;
+    }
+
+    &__image-col {
+      justify-content: flex-start;
+    }
+
+    &__text-col {
+      padding-top: 3rem;
+    }
+
+    &__surname {
+      margin-bottom: 2rem;
+      font-size: clamp(4.5rem, 16vw, 8rem);
+    }
+
+    &__text {
+      max-width: 100%;
+      font-size: 1.35rem;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .c-intro {
+    &__container {
+      padding-inline: 1.25rem;
+    }
+
+    &__header {
+      padding-top: 5rem;
+    }
+
+    &__title {
+      font-size: clamp(4rem, 18vw, 6.5rem);
+    }
+
+    &__body {
+      margin-top: 2.5rem;
+    }
+
+    &__image-col {
+      justify-content: center;
+    }
+
+    &__image {
+      width: min(24rem, 88vw);
+    }
+
+    &__surname {
+      font-size: clamp(4rem, 18vw, 6.5rem);
+    }
+
+    &__text {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .c-intro {
+    &__container {
+      padding-inline: 1rem;
+    }
+
+    &__resume {
+      right: 1rem;
+    }
+
+    &__title,
+    &__text-col {
+      padding-top: 2.25rem;
+    }
+
+    &__text {
+      font-size: 1.15rem;
+    }
+
+    &__button {
+      margin-top: 1.75rem;
+    }
+  }
+}

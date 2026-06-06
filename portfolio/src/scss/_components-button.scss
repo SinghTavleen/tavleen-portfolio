@@ -1,40 +1,65 @@
 @use 'core' as *;
 @use 'bs-core' as *;
 
-@use 'core' as *;
-@use 'bs-core' as *;
-
 .c-btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+
+  padding: 0.5rem 1rem;
 
   font-size: 1rem;
-  text-decoration: none;
+  font-weight: $fw-bold;
+  line-height: 1;
 
-  color: $color-red;
-  padding: 0.5rem 1rem;
+  text-decoration: none;
 
   border: 1px dashed transparent;
   border-radius: 3rem;
 
-  background: transparent;
+  background-color: transparent;
+
   cursor: pointer;
 
   transition:
-    border-color 0.3s ease,
     background-color 0.3s ease,
-    transform 0.25s ease;
-
-  &:hover {
-    border-color: $color-red;
-    background-color: rgba($color-red, 0.08);
-    // transform: translateY(-2px);
-  }
+    border-color 0.3s ease,
+    color 0.3s ease;
 
   &:focus-visible {
-    outline: 2px solid $color-red;
-    outline-offset: 4px;
+    outline: 2px solid currentColor;
+    outline-offset: 0.25rem;
+  }
+
+  // red
+  &--red {
+    color: $color-red;
+
+    &:hover {
+      border-color: $color-red;
+      color: $color-red;
+    }
+  }
+
+  // PINK
+  &--pink {
+    color: $color-pink;
+    border-color: $color-pink;
+
+    &:hover {
+      background-color: $color-pink;
+      color: $color-light;
+    }
+  }
+
+  // ORANGE
+  &--orange {
+    color: $color-orange;
+    border-color: $color-orange;
+
+    &:hover {
+      background-color: $color-orange;
+      color: $color-light;
+    }
   }
 }

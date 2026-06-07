@@ -1,0 +1,265 @@
+@use 'core' as *;
+
+.c-about {
+  padding-block: 8rem;
+  overflow: hidden;
+
+  &__title {
+    margin: 0;
+
+    color: $color-red;
+
+
+    font-weight: $fw-bold;
+    font-style: italic;
+    line-height: 1;
+  }
+
+  &__image-group {
+    position: relative;
+    height: 32rem;
+  }
+
+  &__image {
+    position: absolute;
+    bottom: 0;
+
+    border-radius: 50%;
+    filter: grayscale(1);
+    object-fit: cover;
+
+    opacity: 0;
+
+    transition:
+      opacity 0.6s ease,
+      transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  &__image--dog {
+    left: 0;
+    width: 18rem;
+    height: 18rem;
+    z-index: 1;
+
+    transform: translateX(-7rem) rotate(-45deg);
+    transition-delay: 0.15s;
+  }
+
+  &__image--me {
+    left: 10.5rem;
+    width: 28rem;
+    height: 28rem;
+    z-index: 2;
+
+    transform: scale(0.94);
+  }
+
+  &__image--cat {
+    right: 0;
+    width: 17rem;
+    height: 17rem;
+    z-index: 3;
+
+    transform: translateX(7rem) rotate(45deg);
+    transition-delay: 0.25s;
+  }
+
+  &__bubble {
+    position: absolute;
+    z-index: 5;
+
+    opacity: 0;
+    transform: translateY(0.75rem) scale(0.85);
+
+    color: $color-orange;
+
+    font-size: 1.5rem;
+    font-weight: $fw-bold;
+    font-style: italic;
+    line-height: 1;
+
+    transition:
+      opacity 0.35s ease,
+      transform 0.35s ease;
+  }
+
+  &__bubble--dog {
+    left: 1.5rem;
+    top: 8.25rem;
+  }
+
+  &__bubble--cat {
+    right: 0.75rem;
+    top: 10rem;
+  }
+
+  &__image-group.is-visible {
+    .c-about__image {
+      opacity: 1;
+      transform: translateX(0) rotate(0deg) scale(1);
+    }
+
+    .c-about__bubble {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      transition-delay: 0.85s;
+    }
+  }
+
+  &__text {
+    max-width: 51rem;
+    color: $color-red;
+
+    p {
+      margin: 0 0 2rem;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media (max-width: 1199.98px) {
+  .c-about {
+    padding-block: 7rem;
+
+    &__image-group {
+      height: 28rem;
+    }
+
+    &__image--dog {
+      width: 15rem;
+      height: 15rem;
+    }
+
+    &__image--me {
+      left: 8rem;
+      width: 24rem;
+      height: 24rem;
+    }
+
+    &__image--cat {
+      width: 14rem;
+      height: 14rem;
+    }
+
+    &__bubble--dog {
+      top: 7.5rem;
+    }
+
+    &__bubble--cat {
+      top: 8.5rem;
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
+  .c-about {
+    padding-block: 6rem;
+
+    &__title {
+      margin-bottom: 3rem;
+    }
+
+    &__image-group {
+      max-width: 38rem;
+      height: 26rem;
+      margin-bottom: 4rem;
+    }
+
+    &__text {
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .c-about {
+    padding-block: 4.5rem;
+
+    &__title {
+      margin-bottom: 2.5rem;
+    }
+
+    &__image-group {
+      height: 22rem;
+      margin-bottom: 3rem;
+    }
+
+    &__image--dog {
+      width: 12rem;
+      height: 12rem;
+    }
+
+    &__image--me {
+      left: 6rem;
+      width: 19rem;
+      height: 19rem;
+    }
+
+    &__image--cat {
+      width: 11rem;
+      height: 11rem;
+    }
+
+    &__bubble {
+      font-size: 1.25rem;
+    }
+
+    &__bubble--dog {
+      left: 1rem;
+      top: 6.5rem;
+    }
+
+    &__bubble--cat {
+      right: 0.5rem;
+      top: 7.75rem;
+    }
+
+    &__text {
+      p {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .c-about {
+    padding-block: 4rem;
+
+    &__image-group {
+      height: 18rem;
+      margin-bottom: 2.5rem;
+    }
+
+    &__image--dog {
+      width: 9rem;
+      height: 9rem;
+    }
+
+    &__image--me {
+      left: 4.5rem;
+      width: 15rem;
+      height: 15rem;
+    }
+
+    &__image--cat {
+      width: 8.5rem;
+      height: 8.5rem;
+    }
+
+    &__bubble {
+      font-size: 1.125rem;
+    }
+
+    &__bubble--dog {
+      top: 5.5rem;
+    }
+
+    &__bubble--cat {
+      top: 6.25rem;
+    }
+  }
+}

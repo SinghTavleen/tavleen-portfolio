@@ -5,4 +5,4 @@ import '../scss/styles.scss';
 import * as bootstrap from 'bootstrap';
 
 import './aos.js';
-
+import './about.js';

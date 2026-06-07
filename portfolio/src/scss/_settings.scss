@@ -9,8 +9,10 @@ $fw-regular: 400;
 $fw-medium: 600;
 $fw-bold: 700;
 
-
-
 body {
   background-color: $color-light;
+}
+
+section {
+  margin-bottom: 8rem;
 }
